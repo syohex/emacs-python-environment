@@ -71,7 +71,7 @@ variable can be given as ENVIRONMENT (see `pye-with-mixed-environment')."
       (let ((print-length nil)
             (print-level nil))
         (with-temp-buffer
-          (let ((code (call-process
+          (let ((code (process-file
                        (concat invocation-directory invocation-name)
                        nil t nil
                        "-Q" "--batch"

@@ -93,7 +93,7 @@ https://github.com/tkf/emacs-python-environment/issues/3"
   (let (exit-code output)
     (with-temp-buffer
       (setq exit-code
-            (apply #'call-process (car command)
+            (apply #'process-file (car command)
                    nil                ; INFILE (no input)
                    t                  ; BUFFER (output to this buffer)
                    nil                ; DISPLAY (no refresh is needed)
